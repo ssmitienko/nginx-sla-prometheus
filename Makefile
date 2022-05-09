@@ -7,5 +7,4 @@ docker:
 install: nginx-sla-prometheus
 	mkdir -p /opt/bin
 	install -o root -g root -m 0755 nginx-sla-prometheus /opt/bin/nginx-sla-prometheus
-	install -o root -g root -m 0644 nginx-sla-prometheus.service /etc/systemd/system/nginx-sla-prometheus
-
+	install -o root -g root -m 0644 nginx-sla-prometheus.service /etc/systemd/system/nginx-sla-prometheus.service
