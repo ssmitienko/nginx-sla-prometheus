@@ -1,0 +1,11 @@
+[Unit]
+Description=nginx-sla-prometheus exporter service
+Requires=nginx.service
+
+[Service]
+Type=simple
+Restart=on-failure
+ExecStart=/opt/bin/nginx-sla-prometheus -listen 0.0.0.0:9009 -user sla -password password -backend http://localhost/sla/
+
+[Install]
+WantedBy=multi-user.target
